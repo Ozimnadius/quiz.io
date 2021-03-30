@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <!--  Это не нужно  -->
+    <style>
+        body {
+            font-family: Roboto, Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 15px 0;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="wc-calc">
+        <h2 class="wc-calc__title">Калькулятор видеонаблюдения. Расчет сразу!</h2>
+        <div class="wc-calc__quiz">
+            <div class="quiz">
+                <div class="quiz__subtitle">
+                    Ответьте на несколько простых вопросов. Это займет у вас не больше 1 минуты.
+                </div>
+                <h3 class="quiz__title">
+                    Выберите тип видеонаблюдения
+                </h3>
+                <div class="quiz__progress qprogress">
+                    <div class="qprogress__name">Готово: <b>0%</b></div>
+                    <progress max="9" value="0"></progress>
+                </div>
+                <div class="quiz__steps">
+                    <div class="quiz__wrap">
+                        <div class="quiz__step qstep" data-step="0" data-weight="0" data-title="Выберите тип видеонаблюдения">
+                            <div class="qstep__grid">
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="type" value="home">
+                                    <span class="qitem__fake">
+                                        <span class="qitem__img">
+                                            <img src="imgs/type.jpg" alt="lorem">
+                                        </span>
+                                         <span class="qitem__name">Для дома/дачи</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="type" value="flat">
+                                    <span class="qitem__fake">
+                                         <span class="qitem__img">
+                                            <img src="imgs/type.jpg" alt="lorem">
+                                        </span>
+                                        <span class="qitem__name">Для квартиры</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="type" value="shop">
+                                    <span class="qitem__fake">
+                                        <span class="qitem__img">
+                                        <img src="imgs/type.jpg" alt="lorem">
+                                    </span>
+                                    <span class="qitem__name">Для магазина</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="type" value="office">
+                                    <span class="qitem__fake">
+                                        <span class="qitem__img">
+                                        <img src="imgs/type.jpg" alt="lorem">
+                                    </span>
+                                    <span class="qitem__name">Для офиса</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="type" value="store">
+                                    <span class="qitem__fake">
+                                         <span class="qitem__img">
+                                        <img src="imgs/type.jpg" alt="lorem">
+                                    </span>
+                                    <span class="qitem__name">Для склада</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="type" value="wash">
+                                    <span class="qitem__fake">
+                                        <span class="qitem__img">
+                                        <img src="imgs/type.jpg" alt="lorem">
+                                    </span>
+                                    <span class="qitem__name">Для автомойки</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="type" value="lift">
+                                    <span class="qitem__fake">
+                                        <span class="qitem__img">
+                                        <img src="imgs/type.jpg" alt="lorem">
+                                    </span>
+                                    <span class="qitem__name">В лифте</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="type" value="parking">
+                                    <span class="qitem__fake">
+                                        <span class="qitem__img">
+                                        <img src="imgs/type.jpg" alt="lorem">
+                                    </span>
+                                    <span class="qitem__name">Для парковки</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="type" value="airport">
+                                    <span class="qitem__fake">
+                                        <span class="qitem__img">
+                                        <img src="imgs/type.jpg" alt="lorem">
+                                    </span>
+                                    <span class="qitem__name">Для аэропорта</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="type" value="mall">
+                                    <span class="qitem__fake">
+                                        <span class="qitem__img">
+                                        <img src="imgs/type.jpg" alt="lorem">
+                                    </span>
+                                    <span class="qitem__name">Для торгового центра</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="type" value="plant">
+                                    <span class="qitem__fake">
+                                         <span class="qitem__img">
+                                        <img src="imgs/type.jpg" alt="lorem">
+                                    </span>
+                                    <span class="qitem__name">Для завода</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="quiz__step qstep" data-step="1"
+                             data-weight="1"
+                             data-title="Какая система видеонаблюдения Вас интересует?">
+                            <div class="qstep__grid qstep__grid_2">
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="system" value="local">
+                                    <span class="qitem__fake">
+                                        <span class="qitem__img">
+                                        <img src="imgs/step1.png" alt="lorem">
+                                    </span>
+                                    <span class="qitem__name">Регистратор</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__item qitem">
+                                    <input class="qitem__input jsRequired" type="radio" name="system" value="server">
+                                    <span class="qitem__fake">
+                                        <span class="qitem__img">
+                                        <img src="imgs/step1.png" alt="lorem">
+                                    </span>
+                                    <span class="qitem__name">Сервер</span>
+                                    </span>
+                                </label>
+
+                            </div>
+                        </div>
+                        <div class="quiz__step qstep" data-step="2"
+                             data-weight="2"
+                             data-title="Cколько Вам понадобиться камер видеонаблюдения?">
+                            <h4 class="qstep__title">Вам нужно указать количество камер для нужных Вам зон</h4>
+                            <div class="qstep__ranges">
+                                <div class="qstep__range qrange">
+                                    <div class="qrange__title">Камера внутри дома, шт: <b>0</b></div>
+                                    <input class="qrange__range jsRequired" type="range" name="cameras[inhouse]" value="0" min="0" max="60"
+                                           step="1">
+                                </div>
+                                <div class="qstep__range qrange">
+                                    <div class="qrange__title">Камера по периметру участка, шт: <b>0</b></div>
+                                    <input class="qrange__range jsRequired" type="range" name="cameras[house]" value="0" min="0" max="60"
+                                           step="1">
+                                </div>
+                                <div class="qstep__range qrange">
+                                    <div class="qrange__title">Камера по периметру дома, шт: <b>0</b></div>
+                                    <input class="qrange__range jsRequired" type="range" name="cameras[fence]" value="0" min="0" max="60"
+                                           step="1">
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="quiz__step qstep" data-step="3"
+                             data-weight="4"
+                             data-title="Сколько хранить запись с камер:">
+                            <div class="qstep__radios">
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="period" value="5">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">5 дней</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="period" value="10">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">10 дней</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="period" value="20">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">20 дней</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="period" value="30">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">30 дней</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="period" value="60">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">60 дней</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="quiz__step qstep" data-step="4"
+                             data-weight="5"
+                             data-title="Какие дополнительные пожелания к системе видеонаблюдения?">
+                            <div class="qstep__checks">
+                                <label class="qstep__check qcheck">
+                                    <input class="qcheck__input jsRequired" type="checkbox" name="other" value="record">
+                                    <span class="qcheck__fake">
+                                        <span class="qcheck__check"></span>
+                                        <span class="qcheck__name">Запись звука</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__check qcheck">
+                                    <input class="qcheck__input jsRequired" type="checkbox" name="other" value="remote">
+                                    <span class="qcheck__fake">
+                                        <span class="qcheck__check"></span>
+                                        <span class="qcheck__name">Доступ удалено со смартфона либо планшета</span>
+                                    </span>
+
+                                </label>
+                                <label class="qstep__check qcheck">
+                                    <input class="qcheck__input jsRequired" type="checkbox" name="other" value="view">
+                                    <span class="qcheck__fake">
+                                        <span class="qcheck__check"></span>
+                                        <span class="qcheck__name">Просмотр на мониторе/телевизоре</span>
+                                    </span>
+
+                                </label>
+                            </div>
+                        </div>
+                        <div class="quiz__step qstep" data-step="5"
+                             data-weight="6"
+                             data-title="Как срочно Вам нужна система?">
+                            <div class="qstep__radios">
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="speed" value="fatest">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">Как можно быстрее</span>
+                                    </span>
+
+                                </label>
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="speed" value="fast">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">В ближайшую неделю</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="speed" value="slow">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">Не горит, просто проверяю цены</span>
+                                    </span>
+                                </label>
+
+                            </div>
+                        </div>
+                        <div class="quiz__step qstep" data-step="6"
+                             data-weight="7"
+                             data-title="Eсть на объекте интернет?">
+                            <div class="qstep__radios">
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="inet" value="true">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">Да</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="inet" value="false">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">Нет, нужно установить</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="quiz__step qstep" data-step="7"
+                             data-weight="8"
+                             data-title="Вам важнее цена или качество?">
+                            <div class="qstep__radios">
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="quality" value="cheap">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">Важнее сделать как можно дешевле</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="quality" value="quality">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">Нужно сделать хорошо</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="quality" value="middle">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">Качество важнее, чем цена</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="quiz__step qstep" data-step="8"
+                             data-weight="9"
+                             data-title="Вам нужен готовый комплект или монтаж под ключ?">
+                            <div class="qstep__radios">
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="install" value="true">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">Нужна установка</span>
+                                    </span>
+                                </label>
+                                <label class="qstep__radio qradio">
+                                    <input class="qradio__input jsRequired" type="radio" name="install" value="false">
+                                    <span class="qradio__fake">
+                                        <span class="qradio__name">Установлю самостоятельно</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__btns">
+                    <button type="button" class="quiz__prev hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 268.833 268.833">
+                            <path d="M256.333,121.916H42.679l58.659-58.661c4.882-4.882,4.882-12.796,0-17.678c-4.883-4.881-12.797-4.881-17.678,0l-79.998,80   c-4.883,4.882-4.883,12.796,0,17.678l80,80c2.439,2.439,5.64,3.661,8.839,3.661s6.397-1.222,8.839-3.661   c4.882-4.882,4.882-12.796,0-17.678l-58.661-58.661h213.654c6.903,0,12.5-5.598,12.5-12.5   C268.833,127.513,263.236,121.916,256.333,121.916z"/>
+                        </svg>
+                        Назад
+                    </button>
+                    <button type="button" class="quiz__next hidden">
+                        Далее
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 268.832 268.832" >
+                            <path d="M265.171,125.577l-80-80c-4.881-4.881-12.797-4.881-17.678,0c-4.882,4.882-4.882,12.796,0,17.678l58.661,58.661H12.5   c-6.903,0-12.5,5.597-12.5,12.5c0,6.902,5.597,12.5,12.5,12.5h213.654l-58.659,58.661c-4.882,4.882-4.882,12.796,0,17.678   c2.44,2.439,5.64,3.661,8.839,3.661s6.398-1.222,8.839-3.661l79.998-80C270.053,138.373,270.053,130.459,265.171,125.577z"/>
+                        </svg>
+                    </button>
+                </div>
+                <form action="#" method="post" class="quiz__total qtotal">
+                    <div class="qtotal__img">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64px" height="64px" viewBox="0 0 510 510">
+                            <path d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204    S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255    s114.75,255,255,255s255-114.75,255-255H459z" fill="#ff1037"/>
+                        </svg>
+                    </div>
+                    <h3 class="qtotal__title">
+                        Стоимость Вашего комплекта:
+                    </h3>
+                    <div class="qtotal__price">
+                        39 881 руб.
+                    </div>
+                    <div class="qtotal__fields">
+                        <div class="qtotal__field">
+                            <input class="quiz__input" type="text" name="name" placeholder="Ваше имя">
+                        </div>
+                        <div class="qtotal__field">
+                            <input class="quiz__input" type="tel" name="tel" placeholder="Ваш телефон">
+                        </div>
+                    </div>
+                    <button class="quiz__submit" type="submit">
+                        Отправить
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 268.832 268.832" >
+                            <path d="M265.171,125.577l-80-80c-4.881-4.881-12.797-4.881-17.678,0c-4.882,4.882-4.882,12.796,0,17.678l58.661,58.661H12.5   c-6.903,0-12.5,5.597-12.5,12.5c0,6.902,5.597,12.5,12.5,12.5h213.654l-58.659,58.661c-4.882,4.882-4.882,12.796,0,17.678   c2.44,2.439,5.64,3.661,8.839,3.661s6.398-1.222,8.839-3.661l79.998-80C270.053,138.373,270.053,130.459,265.171,125.577z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src=""></script>
+<script src="script.min.js"></script>
+</body>
+</html>
