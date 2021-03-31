@@ -301,6 +301,10 @@ window.addEventListener('load', function () {
             return this.steps[this.activeIndex].dataset.title;
         }
 
+        get activeStep(){
+            return this.steps[this.activeIndex];
+        }
+
         toggleBtns = () => {
             if (this.isActive) {
                 this.nextBtn.classList.remove('hidden');
@@ -336,11 +340,23 @@ window.addEventListener('load', function () {
                 this.toggleBtns();
             }
 
+            if (window.innerWidth< 992){
+                this.setHeight();
+            }
+
         }
 
         updateProgress() {
             this.progress.value = this.activeIndex;
             this.percents.innerHTML = Math.floor(this.steps[this.activeIndex].dataset.weight / this.totalWeight * 100) + '%';
+        }
+
+        setHeight(){
+            if (this.isLastSlide){
+                this.wrap.style.height = `${this.total.offsetHeight}px`;
+            } else {
+                this.wrap.style.height = `${this.activeStep.offsetHeight}px`;
+            }
         }
 
         finish() {
